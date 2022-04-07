@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Validation Animation</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <input type="password" id="password" />
+            <button class="eye">
+                <i class="far fa-eye hide" id="openEye"></i>
+                <i class="far fa-eye-slash" id="closeEye"></i>
+            </button>
+            <button class="action" data-content="">
+                <i class="fas fa-arrow-right" id="arrow"></i>
+                <i class="fas fa-check hide" id="check"></i>
+                <i class="fas fa-times hide" id="times"></i>
+            </button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>

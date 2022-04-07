@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
+  text-align: center;
+}
+
+.dark {
+  text-align: left;
+  background: #1a1a1a;
+  color: white;
+  position: relative;
+}
+
+img {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+  -webkit-filter: invert(90%);
+          filter: invert(90%);
+}
+
+.content {
+  padding: 9em 5em;
+  z-index: 1;
+  position: relative;
+}
+
+.content h2 {
+  font-size: 5em;
+  margin-bottom: 0;
+}
+
+.content p {
+  font-size: 1.6em;
+}
+/*# sourceMappingURL=main.css.map */

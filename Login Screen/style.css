@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;1,700&display=swap");
+
+* {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+#welcome-screen {
+    background-color: rgb(32, 35, 48);
+    width: 100%;
+    height: 100vh;
+    animation: hide-welcome 1s ease forwards 3.5s;
+}
+
+@keyframes hide-welcome {
+    to {
+        width: 0%;
+        height: 0vh;
+        visibility: hidden;
+        background-color: transparent;
+    }
+}
+
+#login-screen {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    animation: show-login 1s ease forwards 3.7s;
+}
+
+@keyframes show-login {
+    to {
+        width: 100%;
+        height: 100vh;
+        visibility: unset;
+        overflow: unset;
+    }
+}
+
+.sidebar {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #343a40;
+    text-align: center;
+}
+
+.sidebar span {
+    font-size: 20px;
+    color: white;
+}
+
+body {
+    display: flex;
+}
+
+nav {
+    font-size: large;
+}
+
+.brand-title {
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+    left: 34px;
+    font-weight: bold;
+}
+
+.brand-subtitle {
+    font-size: 13px;
+    position: absolute;
+    top: 45px;
+}
+
+.login-container {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(-10%, -50%);
+    background-color: #f2f2f2;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.login-container input {
+    width: 60%;
+    margin: 10px auto 0px auto;
+    position: relative;
+    top: 70px;
+}
+
+.login-img {
+    margin-left: 20vh;
+    animation: upAndDown 3s ease-in-out 0s infinite;
+}
+
+@keyframes upAndDown {
+    from {
+        transform: translate(0, 0px);
+    }
+    65% {
+        transform: translate(0, 20px);
+    }
+    to {
+        transform: translate(0, 0px);
+    }
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.right-footer {
+    position: absolute;
+    right: 5px;
+}
+
+.left-footer {
+    position: absolute;
+    left: 5px;
+}
+
+/* ----- WELCOME SCREEN ----- */
+
+#welcome-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 2.8s;
+}
+
+#welcome-img path:nth-child(1) {
+    stroke-dasharray: 802px;
+    stroke-dashoffset: 802px;
+    animation: line-animation 1s ease forwards;
+}
+
+#welcome-img path:nth-child(2) {
+    stroke-dasharray: 473px;
+    stroke-dashoffset: 473px;
+    animation: line-animation 1s ease forwards 0.3s;
+}
+
+#welcome-img path:nth-child(3) {
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 300px;
+    animation: line-animation 1s ease forwards 0.6s;
+}
+
+#welcome-img path:nth-child(4) {
+    stroke-dasharray: 510px;
+    stroke-dashoffset: 510px;
+    animation: line-animation 1s ease forwards 0.9s;
+}
+
+#welcome-img path:nth-child(5) {
+    stroke-dasharray: 325px;
+    stroke-dashoffset: 325px;
+    animation: line-animation 1s ease forwards 1.1s;
+}
+
+#welcome-img path:nth-child(6) {
+    stroke-dasharray: 760px;
+    stroke-dashoffset: 760px;
+    animation: line-animation 1s ease forwards 1.5s;
+}
+
+#welcome-img path:nth-child(7) {
+    stroke-dasharray: 473px;
+    stroke-dashoffset: 473px;
+    animation: line-animation 1s ease forwards 1.8s;
+}
+
+@keyframes line-animation {
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: white;
+    }
+}

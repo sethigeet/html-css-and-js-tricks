@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    overflow-y: hidden;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 100vh;
+}
+
+span {
+    /* --------- fade in effect --------- */
+    /* opacity: 0; */
+    /* transition: all 0.5s ease; */
+    /* display: inline-block; */
+    /* transform: translateY(50px); */
+
+    /* --------- Color change --------- */
+    transition: all 0.5s ease;
+}
+
+span.fade {
+    /* --------- fade in effect --------- */
+    /* opacity: 1; */
+    /* transform: translateY(0px); */
+
+    /* --------- Color change --------- */
+    color: rgb(255, 90, 186);
+}

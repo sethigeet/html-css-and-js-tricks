@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Glass Morphism</title>
+    </head>
+    <body>
+        <img src="abstract.jpg" alt="abstract-bg" />
+        <div class="circle"></div>
+
+        <div class="container" id="glass">
+            <h2 class="seq">Hello everyone</h2>
+            <p class="seq">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+        </div>
+
+        <h1>Glassmorphism Realised</h1>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script>
+            const tl = gsap.timeline({
+                defaults: { ease: "power2.inOut", duration: 1.5 },
+            });
+            tl.from("img", { x: "-10%", opacity: 0 })
+                .from(".container", { opacity: 0, duration: 1 }, "-=1")
+                .from(".container", { x: "-20%", backdropFilter: "blur(0px)" })
+                .from(
+                    ".seq",
+                    { y: -30, opacity: 0, stagger: 0.2, duration: 0.5 },
+                    "-=0.5"
+                )
+                .from("h1", { y: 20, clipPath: "inset(0 0 100% 0)" }, "-=0.8");
+        </script>
+    </body>
+</html>

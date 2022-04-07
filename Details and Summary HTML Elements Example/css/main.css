@@ -1,0 +1,68 @@
+body {
+  padding: 2em;
+  margin: 0;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+summary {
+  padding: 1em;
+  background: #ffda05;
+  margin-bottom: 1em;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+summary:hover {
+  background: #ffe034;
+}
+
+summary::-webkit-details-marker {
+  background: url("../arrow.svg") center no-repeat;
+  color: transparent;
+  width: 17px;
+  height: 17px;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: sweep 0.5s ease-in-out;
+          animation: sweep 0.5s ease-in-out;
+}
+
+details[open] summary::-webkit-details-marker {
+  -webkit-transform: rotate(-180deg) translateY(-15%);
+          transform: rotate(-180deg) translateY(-15%);
+}
+
+@-webkit-keyframes sweep {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes sweep {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

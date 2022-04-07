@@ -1,0 +1,13 @@
+{
+    "name": "Smooth-Scrolling-with-Locomotive-Scroll",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "locomotive-scroll": "^3.6.1",
+        "parcel": "^1.12.4"
+    },
+    "scripts": {
+        "start": "parcel index.html"
+    }
+}
